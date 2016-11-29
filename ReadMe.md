@@ -16,8 +16,7 @@ I have set up an eslint config file:
 ./node_modules/.bin/eslint --init
 ```
 
-Serverless should be installed globally via NPM (currently 1.0.0. rc) - see`` ~\scripts\1_InitialiseProject.bat``
-(all cli commands are assumed to be executed from project root)
+Serverless should be installed globally via NPM (all cli commands are assumed to be executed from project root)
 
 Assuming you are happy to start with the code as is - you just need to instal the already defined dependecies.
 To install the dependencies run:
@@ -25,4 +24,9 @@ To install the dependencies run:
 >> npm install
 ```
 
-SERVERLESS_ADMIN_AWS_PROFILE=MyCredsProfile
+Set you AWS credtial profile to be used (ie change from my serverless-rhystest_dev profile to whatever profile you are using, or leave it out if you are using the default)
+```
+Serverless deploy
+```
+
+If you want - set up lambci as per : https://github.com/lambci/lambci
