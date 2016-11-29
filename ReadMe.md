@@ -30,3 +30,4 @@ Serverless deploy
 ```
 
 If you want - set up lambci as per : https://github.com/lambci/lambci
+You will need slack and git tokens to proceed with this.
