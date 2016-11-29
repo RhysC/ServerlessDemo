@@ -24,6 +24,10 @@ provider:
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
+  stage: dev
+  profile: serverless-rhystest_dev
+
+  region: ap-southeast-2
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -52,11 +56,18 @@ provider:
 #  exclude:
 #    - exclude-me.js
 #    - exclude-me-dir/**
+package:
+  exclude:
+    - .gitignore
+    - readme.md
 
 functions:
   hello:
     handler: handler.hello
-
+    events:
+      - http: 
+          path: hello
+          method: GET
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
 #    Check the event documentation for details
@@ -68,6 +79,7 @@ functions:
 #      - schedule: rate(10 minutes)
 #      - sns: greeter-topic
 #      - stream: arn:aws:dynamodb:region:XXXXXX:table/foo/stream/1970-01-01T00:00:00.000
+
 
 #    Define function environment variables here
 #    environment:

@@ -25,3 +25,4 @@ To install the dependencies run:
 >> npm install
 ```
 
+SERVERLESS_ADMIN_AWS_PROFILE=MyCredsProfile
